@@ -1,0 +1,166 @@
+PROG2500 - Sprint 1 Submission
+Student Name: Gagandeep Singh
+Student ID: 9047496
+Project: TaskTrack - Simple Task Management Web App
+
+===================================
+SPRINT 1 - BACKEND SUBMISSION
+===================================
+
+GitHub Repository URL:
+https://github.com/YOUR_USERNAME/TaskTrack
+
+Live Deployment URL (Render):
+https://tasktrack-api.onrender.com
+
+===================================
+COMPLETED FEATURES
+===================================
+
+✅ User Authentication
+   - User registration with password hashing
+   - User login with JWT token generation
+   - Protected routes with authentication middleware
+
+✅ Database Setup (PostgreSQL)
+   - Users table
+   - Tasks table
+   - Categories table
+   - Proper foreign key relationships
+
+✅ Task Management (Full CRUD)
+   - Create new task
+   - Get all tasks for user
+   - Get single task by ID
+   - Update task (title, description, due date, status)
+   - Delete task
+
+✅ Category Management
+   - Create category
+   - Get all categories for user
+   - Delete category
+
+✅ API Endpoints (RESTful)
+   POST   /api/users/register
+   POST   /api/users/login
+   GET    /api/tasks
+   GET    /api/tasks/:id
+   POST   /api/tasks
+   PUT    /api/tasks/:id
+   DELETE /api/tasks/:id
+   GET    /api/categories
+   POST   /api/categories
+   DELETE /api/categories/:id
+
+✅ Security
+   - Password encryption using bcryptjs
+   - JWT token authentication
+   - Protected routes
+   - Environment variables for sensitive data
+
+✅ Deployment
+   - PostgreSQL database on Render
+   - Web service deployed on Render
+   - Live and accessible
+   - Environment variables configured
+
+===================================
+TECHNICAL DETAILS
+===================================
+
+Technologies Used:
+- Node.js v18+
+- Express.js
+- PostgreSQL (Render)
+- JWT (jsonwebtoken)
+- bcryptjs
+- cors
+- dotenv
+
+Database Schema:
+- 3 related tables (Users, Tasks, Categories)
+- One-to-many relationships
+- Foreign key constraints
+- Cascading deletes
+
+===================================
+GIT COMMIT HISTORY
+===================================
+
+Regular commits throughout development:
+✅ Initial project setup
+✅ Database configuration
+✅ User authentication implementation
+✅ Task CRUD operations
+✅ Category management
+✅ Deployment configuration
+
+===================================
+TESTING
+===================================
+
+All endpoints tested and working:
+✅ User registration
+✅ User login
+✅ Task creation
+✅ Task retrieval (all and single)
+✅ Task update
+✅ Task deletion
+✅ Category creation
+✅ Category retrieval
+✅ Category deletion
+✅ Authentication middleware
+✅ Error handling
+
+===================================
+DEMO READINESS
+===================================
+
+Ready to demonstrate:
+✅ Running server
+✅ API endpoint functionality
+✅ Code navigation (routes, middleware, database)
+✅ Database schema explanation
+✅ Authentication flow explanation
+✅ CRUD operations
+
+===================================
+ADDITIONAL NOTES
+===================================
+
+- All code is well-commented
+- Error handling implemented
+- RESTful API design followed
+- Security best practices applied
+- Documentation provided (README, API_TESTING, DEPLOYMENT guides)
+
+===================================
+SPRINT 2 PREVIEW
+===================================
+
+Next Sprint (Weeks 9-10):
+- React frontend setup
+- Login/Register pages
+- Dashboard with task list
+- Create/Edit task forms
+- Category management UI
+
+===================================
+
+Submission Date: [Fill in date]
+Sprint Review Attendance: [Will attend / Unable to attend]
+
+If unable to attend Sprint Review, alternative arrangements made with instructor: [Yes/No]
+
+===================================
+
+This project fulfills all requirements for Sprint 1:
+- ✅ Node.js and Express setup
+- ✅ PostgreSQL database
+- ✅ RESTful API with CRUD operations
+- ✅ User authentication with JWT
+- ✅ Deployed to Render (live URL)
+- ✅ Regular Git commit history
+- ✅ All endpoints tested and working
+
+Ready for Sprint Review Demo!
