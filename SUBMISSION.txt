@@ -8,7 +8,7 @@ SPRINT 1 - BACKEND SUBMISSION
 ===================================
 
 GitHub Repository URL:
-https://github.com/YOUR_USERNAME/TaskTrack
+https://github.com/Gagan-sran/TaskTrack
 
 Live Deployment URL (Render):
 https://tasktrack-gm4r.onrender.com
@@ -145,12 +145,6 @@ Next Sprint (Weeks 9-10):
 - Create/Edit task forms
 - Category management UI
 
-===================================
-
-Submission Date: [Fill in date]
-Sprint Review Attendance: [Will attend / Unable to attend]
-
-If unable to attend Sprint Review, alternative arrangements made with instructor: [Yes/No]
 
 ===================================
 
