@@ -17,21 +17,39 @@
 ## Test Endpoints
 
 ### Test 1: Check API is Running
-**GET** `http://localhost:3000/`
+**GET** `https://tasktrack-gm4r.onrender.com/`
 
 Expected Response (200):
 ```json
 {
   "message": "TaskTrack API",
   "version": "1.0.0",
-  "endpoints": { ... }
+  "status": "Running",
+  "endpoints": {
+    "users": {
+      "register": "POST /api/users/register",
+      "login": "POST /api/users/login"
+    },
+    "tasks": {
+      "getAll": "GET /api/tasks",
+      "getOne": "GET /api/tasks/:id",
+      "create": "POST /api/tasks",
+      "update": "PUT /api/tasks/:id",
+      "delete": "DELETE /api/tasks/:id"
+    },
+    "categories": {
+      "getAll": "GET /api/categories",
+      "create": "POST /api/categories",
+      "delete": "DELETE /api/categories/:id"
+    }
+  }
 }
 ```
 
 ---
 
 ### Test 2: Register a New User
-**POST** `http://localhost:3000/api/users/register`
+**POST** `https://tasktrack-gm4r.onrender.com/api/users/register`
 
 Headers:
 ```
@@ -65,7 +83,7 @@ Expected Response (201):
 ---
 
 ### Test 3: Login
-**POST** `http://localhost:3000/api/users/login`
+**POST** `https://tasktrack-gm4r.onrender.com/api/users/login`
 
 Headers:
 ```
@@ -96,7 +114,7 @@ Expected Response (200):
 ---
 
 ### Test 4: Create a Category (Protected)
-**POST** `http://localhost:3000/api/categories`
+**POST** `https://tasktrack-gm4r.onrender.com/api/categories`
 
 Headers:
 ```
@@ -127,7 +145,7 @@ Expected Response (201):
 ---
 
 ### Test 5: Get All Categories (Protected)
-**GET** `http://localhost:3000/api/categories`
+**GET** `https://tasktrack-gm4r.onrender.com/api/categories`
 
 Headers:
 ```
@@ -152,7 +170,7 @@ Expected Response (200):
 ---
 
 ### Test 6: Create a Task (Protected)
-**POST** `http://localhost:3000/api/tasks`
+**POST** `https://tasktrack-gm4r.onrender.com/api/tasks`
 
 Headers:
 ```
@@ -191,7 +209,7 @@ Expected Response (201):
 ---
 
 ### Test 7: Get All Tasks (Protected)
-**GET** `http://localhost:3000/api/tasks`
+**GET** `https://tasktrack-gm4r.onrender.com/api/tasks`
 
 Headers:
 ```
@@ -222,7 +240,7 @@ Expected Response (200):
 ---
 
 ### Test 8: Get Single Task (Protected)
-**GET** `http://localhost:3000/api/tasks/1`
+**GET** `https://tasktrack-gm4r.onrender.com/api/tasks/1`
 
 Headers:
 ```
@@ -250,7 +268,7 @@ Expected Response (200):
 ---
 
 ### Test 9: Update Task (Protected)
-**PUT** `http://localhost:3000/api/tasks/1`
+**PUT** `https://tasktrack-gm4r.onrender.com/api/tasks/1`
 
 Headers:
 ```
@@ -286,7 +304,7 @@ Expected Response (200):
 ---
 
 ### Test 10: Delete Task (Protected)
-**DELETE** `http://localhost:3000/api/tasks/1`
+**DELETE** `https://tasktrack-gm4r.onrender.com/api/tasks/1`
 
 Headers:
 ```
@@ -300,7 +318,13 @@ Expected Response (200):
   "task": {
     "id": 1,
     "title": "Complete Sprint 1",
-    ...
+    "description": "Finish all backend API endpoints",
+    "due_date": "2026-02-10",
+    "status": "completed",
+    "user_id": 1,
+    "category_id": 1,
+    "created_at": "2026-02-07T...",
+    "updated_at": "2026-02-07T..."
   }
 }
 ```
@@ -308,7 +332,7 @@ Expected Response (200):
 ---
 
 ### Test 11: Delete Category (Protected)
-**DELETE** `http://localhost:3000/api/categories/1`
+**DELETE** `https://tasktrack-gm4r.onrender.com/api/categories/1`
 
 Headers:
 ```
@@ -322,7 +346,8 @@ Expected Response (200):
   "category": {
     "id": 1,
     "category_name": "Work",
-    ...
+    "user_id": 1,
+    "created_at": "2026-02-07T..."
   }
 }
 ```
@@ -332,7 +357,7 @@ Expected Response (200):
 ## Error Testing
 
 ### Test 12: Register with Existing Email
-**POST** `http://localhost:3000/api/users/register`
+**POST** `https://tasktrack-gm4r.onrender.com/api/users/register`
 
 Body:
 ```json
@@ -353,7 +378,7 @@ Expected Response (400):
 ---
 
 ### Test 13: Login with Wrong Password
-**POST** `http://localhost:3000/api/users/login`
+**POST** `https://tasktrack-gm4r.onrender.com/api/users/login`
 
 Body:
 ```json
@@ -373,7 +398,7 @@ Expected Response (401):
 ---
 
 ### Test 14: Access Protected Route Without Token
-**GET** `http://localhost:3000/api/tasks`
+**GET** `https://tasktrack-gm4r.onrender.com/api/tasks`
 
 Headers: (No Authorization header)
 
@@ -387,7 +412,7 @@ Expected Response (401):
 ---
 
 ### Test 15: Create Task Without Title
-**POST** `http://localhost:3000/api/tasks`
+**POST** `https://tasktrack-gm4r.onrender.com/api/tasks`
 
 Headers:
 ```

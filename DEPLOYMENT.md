@@ -105,20 +105,20 @@
 ### Part 5: Test Your Deployment
 
 1. **Get Your Live URL**
-   - Your API URL will be: `https://tasktrack-api.onrender.com`
+   - Your API URL will be: `https://tasktrack-gm4r.onrender.com`
    - Or check the URL shown in your Render dashboard
 
 2. **Test the API**
    Open your browser or use curl:
    ```bash
-   curl https://tasktrack-api.onrender.com
+   curl https://tasktrack-gm4r.onrender.com
    ```
    
    You should see the API welcome message!
 
 3. **Test User Registration**
    ```bash
-   curl -X POST https://tasktrack-api.onrender.com/api/users/register \
+   curl -X POST https://tasktrack-gm4r.onrender.com/api/users/register \
      -H "Content-Type: application/json" \
      -d '{"name":"Test User","email":"test@example.com","password":"password123"}'
    ```
@@ -190,8 +190,8 @@ After making changes to your code:
 
 Your submission should include:
 
-1. ✅ Live API URL: `https://tasktrack-api.onrender.com`
-2. ✅ GitHub Repository URL: `https://github.com/YOUR_USERNAME/TaskTrack`
+1. ✅ Live API URL: `https://tasktrack-gm4r.onrender.com`
+2. ✅ GitHub Repository URL: `https://github.com/Gagan-sran/TaskTrack`
 3. ✅ Regular commit history showing development progress
 4. ✅ All endpoints working and tested
 
