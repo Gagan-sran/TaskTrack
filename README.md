@@ -102,6 +102,7 @@ npm start
 ```
 
 The server will run on `http://localhost:3000`
+Live API URL: `https://tasktrack-gm4r.onrender.com`
 
 ## API Endpoints
 
@@ -200,7 +201,7 @@ Add these in Render's Environment settings:
 ### 4. Deploy
 - Click "Create Web Service"
 - Wait for deployment to complete
-- Your API will be live at: `https://tasktrack-api.onrender.com`
+- Your API will be live at: `https://tasktrack-gm4r.onrender.com`
 
 ### 5. Initialize Database on Render
 After deployment, run this command in Render Shell:

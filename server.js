@@ -94,28 +94,37 @@ app.use('/api/users', userRoutes);
 app.use('/api/tasks', taskRoutes);
 app.use('/api/categories', categoryRoutes);
 
-// Root route
+// Root route — returns a map of all available endpoints
 app.get('/', (req, res) => {
   res.json({
     message: 'TaskTrack API',
     version: '1.0.0',
     status: 'Running',
+    note: 'Protected routes require: Authorization: Bearer <token>',
     endpoints: {
+      auth: {
+        register: 'POST /api/users/register  (public)',
+        login:    'POST /api/users/login     (public)'
+      },
       users: {
-        register: 'POST /api/users/register',
-        login: 'POST /api/users/login'
+        getAll:  'GET    /api/users      (protected)',
+        getOne:  'GET    /api/users/:id  (protected)',
+        update:  'PUT    /api/users/:id  (protected — own account)',
+        delete:  'DELETE /api/users/:id  (protected — own account)'
       },
       tasks: {
-        getAll: 'GET /api/tasks',
-        getOne: 'GET /api/tasks/:id',
-        create: 'POST /api/tasks',
-        update: 'PUT /api/tasks/:id',
-        delete: 'DELETE /api/tasks/:id'
+        getAll:  'GET    /api/tasks      (protected)',
+        getOne:  'GET    /api/tasks/:id  (protected)',
+        create:  'POST   /api/tasks      (protected)',
+        update:  'PUT    /api/tasks/:id  (protected)',
+        delete:  'DELETE /api/tasks/:id  (protected)'
       },
       categories: {
-        getAll: 'GET /api/categories',
-        create: 'POST /api/categories',
-        delete: 'DELETE /api/categories/:id'
+        getAll:  'GET    /api/categories      (protected)',
+        getOne:  'GET    /api/categories/:id  (protected)',
+        create:  'POST   /api/categories      (protected)',
+        update:  'PUT    /api/categories/:id  (protected)',
+        delete:  'DELETE /api/categories/:id  (protected)'
       }
     }
   });
@@ -144,15 +153,14 @@ async function startServer() {
       console.log(`📍 Environment: ${process.env.NODE_ENV || 'development'}`);
       console.log(`🔗 API: http://localhost:${PORT}`);
       console.log('\n📖 Available endpoints:');
-      console.log('   POST /api/users/register');
-      console.log('   POST /api/users/login');
-      console.log('   GET  /api/tasks');
-      console.log('   POST /api/tasks');
-      console.log('   PUT  /api/tasks/:id');
-      console.log('   DELETE /api/tasks/:id');
-      console.log('   GET  /api/categories');
-      console.log('   POST /api/categories');
-      console.log('   DELETE /api/categories/:id\n');
+      console.log('   POST   /api/users/register');
+      console.log('   POST   /api/users/login');
+      console.log('   GET    /api/users  |  GET /api/users/:id');
+      console.log('   PUT    /api/users/:id  |  DELETE /api/users/:id');
+      console.log('   GET    /api/tasks  |  GET /api/tasks/:id');
+      console.log('   POST   /api/tasks  |  PUT /api/tasks/:id  |  DELETE /api/tasks/:id');
+      console.log('   GET    /api/categories  |  GET /api/categories/:id');
+      console.log('   POST   /api/categories  |  PUT /api/categories/:id  |  DELETE /api/categories/:id\n');
     });
   } catch (error) {
     console.error('Failed to start server:', error);
