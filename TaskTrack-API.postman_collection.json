@@ -33,7 +33,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"password\": \"password123\"\n}",
+              "raw": "{\n  \"name\": \"Gagan Singh\",\n  \"email\": \"gagan@example.com\",\n  \"password\": \"password123\"\n}",
               "options": { "raw": { "language": "json" } }
             },
             "url": {
@@ -49,7 +49,7 @@
               "status": "Created",
               "code": 201,
               "header": [{ "key": "Content-Type", "value": "application/json" }],
-              "body": "{\n  \"message\": \"User registered successfully\",\n  \"user\": {\n    \"id\": 1,\n    \"name\": \"John Doe\",\n    \"email\": \"john@example.com\"\n  },\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\"\n}"
+              "body": "{\n  \"message\": \"User registered successfully\",\n  \"user\": {\n    \"id\": 1,\n    \"name\": \"Gagan Singh\",\n    \"email\": \"gagan@example.com\"\n  },\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\"\n}"
             },
             {
               "name": "400 - Email Already Exists",
@@ -69,7 +69,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"email\": \"john@example.com\",\n  \"password\": \"password123\"\n}",
+              "raw": "{\n  \"email\": \"gagan@example.com\",\n  \"password\": \"password123\"\n}",
               "options": { "raw": { "language": "json" } }
             },
             "url": {
@@ -85,7 +85,7 @@
               "status": "OK",
               "code": 200,
               "header": [{ "key": "Content-Type", "value": "application/json" }],
-              "body": "{\n  \"message\": \"Login successful\",\n  \"user\": {\n    \"id\": 1,\n    \"name\": \"John Doe\",\n    \"email\": \"john@example.com\"\n  },\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\"\n}"
+              "body": "{\n  \"message\": \"Login successful\",\n  \"user\": {\n    \"id\": 1,\n    \"name\": \"Gagan Singh\",\n    \"email\": \"gagan@example.com\"\n  },\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\"\n}"
             },
             {
               "name": "401 - Invalid Credentials",
@@ -122,7 +122,7 @@
               "status": "OK",
               "code": 200,
               "header": [{ "key": "Content-Type", "value": "application/json" }],
-              "body": "{\n  \"users\": [\n    { \"id\": 1, \"name\": \"John Doe\", \"email\": \"john@example.com\", \"created_at\": \"2026-02-26T10:00:00.000Z\" },\n    { \"id\": 2, \"name\": \"Jane Smith\", \"email\": \"jane@example.com\", \"created_at\": \"2026-02-25T09:00:00.000Z\" }\n  ],\n  \"count\": 2\n}"
+              "body": "{\n  \"users\": [\n    { \"id\": 1, \"name\": \"Gagan Singh\", \"email\": \"gagan@example.com\", \"created_at\": \"2026-02-26T10:00:00.000Z\" },\n    { \"id\": 2, \"name\": \"Priya Patel\", \"email\": \"priya@example.com\", \"created_at\": \"2026-02-25T09:00:00.000Z\" }\n  ],\n  \"count\": 2\n}"
             },
             {
               "name": "401 - No Token",
@@ -153,7 +153,7 @@
               "status": "OK",
               "code": 200,
               "header": [{ "key": "Content-Type", "value": "application/json" }],
-              "body": "{\n  \"user\": {\n    \"id\": 1,\n    \"name\": \"John Doe\",\n    \"email\": \"john@example.com\",\n    \"created_at\": \"2026-02-26T10:00:00.000Z\"\n  }\n}"
+              "body": "{\n  \"user\": {\n    \"id\": 1,\n    \"name\": \"Gagan Singh\",\n    \"email\": \"gagan@example.com\",\n    \"created_at\": \"2026-02-26T10:00:00.000Z\"\n  }\n}"
             },
             {
               "name": "404 - User Not Found",
@@ -174,7 +174,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"John Updated\",\n  \"email\": \"john.updated@example.com\"\n}",
+              "raw": "{\n  \"name\": \"Gagan Updated\",\n  \"email\": \"gagan.updated@example.com\"\n}",
               "options": { "raw": { "language": "json" } }
             },
             "url": {
@@ -190,7 +190,7 @@
               "status": "OK",
               "code": 200,
               "header": [{ "key": "Content-Type", "value": "application/json" }],
-              "body": "{\n  \"message\": \"User updated successfully\",\n  \"user\": {\n    \"id\": 1,\n    \"name\": \"John Updated\",\n    \"email\": \"john.updated@example.com\",\n    \"created_at\": \"2026-02-26T10:00:00.000Z\"\n  }\n}"
+              "body": "{\n  \"message\": \"User updated successfully\",\n  \"user\": {\n    \"id\": 1,\n    \"name\": \"Gagan Updated\",\n    \"email\": \"gagan.updated@example.com\",\n    \"created_at\": \"2026-02-26T10:00:00.000Z\"\n  }\n}"
             },
             {
               "name": "403 - Not Own Account",
@@ -221,7 +221,7 @@
               "status": "OK",
               "code": 200,
               "header": [{ "key": "Content-Type", "value": "application/json" }],
-              "body": "{\n  \"message\": \"User deleted successfully\",\n  \"user\": {\n    \"id\": 1,\n    \"name\": \"John Doe\",\n    \"email\": \"john@example.com\"\n  }\n}"
+              "body": "{\n  \"message\": \"User deleted successfully\",\n  \"user\": {\n    \"id\": 1,\n    \"name\": \"Gagan Singh\",\n    \"email\": \"gagan@example.com\"\n  }\n}"
             },
             {
               "name": "404 - User Not Found",
